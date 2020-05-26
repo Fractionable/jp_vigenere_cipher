@@ -4,4 +4,3 @@
  */
 
 #include <iostream>
-#include <vector>

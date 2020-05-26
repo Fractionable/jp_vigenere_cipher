@@ -5,10 +5,13 @@
  * 
  */
 
-#include "decryption.h"
-#include "encryption.h"
+//Middle man header file
 #include "inputOutput.h"
 
-int main() {
+//Main file to run program
+int main()
+{
+    //...check other files for comments regarding bellow commands
     introduction();
+    askScenario();
 }

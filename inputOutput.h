@@ -32,7 +32,11 @@ void askWord()
 }
 
 //Process Decryption then display to user
-void displayDecrypt() {}
+void displayDecrypt()
+{
+    std::cout << "\nThe original word was: " << userWord;
+    std::cout << "\nThe decrypted word is: " << decrypt(userWord, userKey);
+}
 
 //Process Encryption then display to user
 void displayEncrypt()

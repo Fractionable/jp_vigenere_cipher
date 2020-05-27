@@ -14,9 +14,23 @@ std::string contrived, organic, key;
 void checkKey()
 {
     int step = 0;
-    while (organic.size() != key.size())
+
+    while (organic.size() > key.size())
     {
-        key.push_back(key[++step]);
+        if (step == key.size())
+        {
+            step = 0;
+        }
+        key.push_back(key[step++]);
+    }
+
+    if (organic.size() < key.size())
+    {
+        int temp = key.size() - organic.size();
+        for (int step = 0; step < temp; step++)
+        {
+            key.pop_back();
+        }
     }
 }
 

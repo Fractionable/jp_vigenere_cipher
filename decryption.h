@@ -5,6 +5,7 @@
 
 //Included essential libraries
 #include <iostream>
+#include <algorithm>
 
 //Declared variables for encrpytion
 //reverseOrganic is original - reverseContrived is processed
@@ -17,7 +18,7 @@ void checkReverseKey()
 
     while (reverseOrganic.size() > reverseKey.size())
     {
-        if (step == reverseKey.size() + 1)
+        if (step == reverseKey.size())
         {
             step = 0;
         }

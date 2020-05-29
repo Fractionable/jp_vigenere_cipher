@@ -5,6 +5,7 @@
 
 //Included essential libraries
 #include <iostream>
+#include <algorithm>
 
 //Declared variables for encrpytion
 //Organic is original - Contrived is processed
@@ -40,7 +41,7 @@ std::string encrypt(std::string organicWord, std::string keyWord)
     //Move parameters to local variables
     organic = organicWord;
     key = keyWord;
-
+    
     //Check for key length
     checkKey();
 

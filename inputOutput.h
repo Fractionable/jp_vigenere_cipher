@@ -4,6 +4,7 @@
  */
 
 //Include primary header files for Decrypting and Encrypting
+#include <algorithm>
 #include "decryption.h"
 #include "encryption.h"
 
@@ -22,6 +23,9 @@ void askKey()
 {
     std::cout << "What is your key?\t\tEnter here: ";
     std::cin >> userKey;
+    
+    //Convert to all capital
+    transform(userKey.begin(), userKey.end(), userKey.begin(), ::toupper);
 }
 
 //Ask user for word to Decrypt or Encrypt
@@ -29,11 +33,15 @@ void askWord()
 {
     std::cout << "What is your word?\t\tEnter here: ";
     std::cin >> userWord;
+
+    //Convert to all capital
+    transform(userWord.begin(), userWord.end(), userWord.begin(), ::toupper);
 }
 
 //Process Decryption then display to user
 void displayDecrypt()
 {
+    
     std::cout << "\nThe original word was: " << userWord;
     std::cout << "\nThe decrypted word is: " << decrypt(userWord, userKey);
 }
